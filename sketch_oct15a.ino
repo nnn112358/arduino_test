@@ -14,22 +14,22 @@ void setup() {
   // put your setup code here, to run once:
 
   //Input Port
-  pinMode(2, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
-  pinMode(4, INPUT_PULLUP);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(14, INPUT_PULLUP);
-  pinMode(15, INPUT_PULLUP);
+  pinMode(2, INPUT_PULLUP);   //D2
+  pinMode(3, INPUT_PULLUP);  //D3
+  pinMode(4, INPUT_PULLUP);   //D4
+  pinMode(5, INPUT_PULLUP);   //D5
+  pinMode(14, INPUT_PULLUP);  //A0
+  pinMode(15, INPUT_PULLUP);  //A1
   
   //OutPort
-  spcon_chasen.attach(6);
-  spcon_chasen_lift.attach(7);
-  spcon_turntable.attach(8);
-  servo_hisyaku.attach(9);
-  servo_arm1.attach(10);
-  servo_arm2.attach(11);
-  servo_arm3.attach(12);
-  servo_arm4.attach(13);
+  spcon_chasen.attach(6);     //D6
+  spcon_chasen_lift.attach(7);//D7
+  spcon_turntable.attach(8);  //D8
+  servo_hisyaku.attach(9);    //D9
+  servo_arm1.attach(10);      //D10
+  servo_arm2.attach(11);      //D11
+  servo_arm3.attach(12);      //D12
+  servo_arm4.attach(13);      //D13
 
   Serial.begin(9600); // open a serial connection to your computer
 
