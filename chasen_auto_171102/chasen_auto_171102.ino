@@ -47,7 +47,7 @@ void setup() {
   servo_arm1.attach(10);      //D10
   servo_arm2.attach(11);      //D11
   servo_arm3.attach(12);      //D12
-  //servo_arm4.attach(13);      //D13
+  servo_arm4.attach(13);      //D13
 
   Serial.begin(9600); // open a serial connection to your computer
   Serial.setTimeout(10000UL); // タイムアウト設定（10秒）
@@ -68,13 +68,13 @@ void setup() {
   servo_arm1.write(servo_stop_duty);
   servo_arm2.write(servo_stop_duty);
   servo_arm3.write(servo_stop_duty);
-  //servo_arm4.write(servo_stop_duty);
+  servo_arm4.write(servo_stop_duty);
 
   start_flg = 0;
 
 
-  pinMode(13, OUTPUT);
-  digitalWrite(13, LOW);   // blink the led
+  //pinMode(13, OUTPUT);
+  //digitalWrite(13, LOW);   // blink the led
 
   //  nh.initNode();
   // nh.subscribe(sub);
@@ -140,16 +140,7 @@ void loop() {
     //ターンテーブル
     Serial.print("spcon_turntable\n");
 
-    digitalWrite(13, HIGH);   // blink the led
-    delay(100);
-    digitalWrite(13, LOW);   // blink the led
-    delay(100);
-    digitalWrite(13, HIGH);   // blink the led
-    delay(100);
-    digitalWrite(13, LOW);   // blink the led
-    delay(100);
-
-
+ 
     start_flg = 0;
 
   }
