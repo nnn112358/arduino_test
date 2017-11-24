@@ -178,7 +178,7 @@ void loop() {
     //3,4,5   リフト
     //6,7,8   ターンテーブル
     //9,0     柄杓
-    //q,w     ARM1 茶さじ根本
+    //q,w     ARM1 茶さじnnn
     //e,r     ARM2
     //t,y     ARM3
     //s,d   　ARM4 茶さじ先端  "a"は不要のため、削除
@@ -295,14 +295,14 @@ void loop() {
         }
         break;
 
-      case 'q'://arm1 茶さじ根本 cw
+      case 'q'://arm1 茶さじnnn cw
         for (int i = servo_stop_duty; i < servo_kaiten2; i++) {
           servo_arm1.write(i);
           delay(20);
         }
         break;
       
-      case 'w'://arm1 茶さじ根本 stop
+      case 'w'://arm1 茶さじnnn stop
         for (int i = servo_kaiten2; i > servo_stop_duty; i--) {
           servo_arm1.write(i);
           delay(20);
@@ -371,7 +371,7 @@ void loop() {
           servo_arm2.write(i);
           delay(10);
         }
-        //arm1 茶さじ根本
+        //arm1 茶さじnnn
         for (int i = spcon_stop_duty; i < servo_kaiten; i++) {
           servo_arm1.write(i);
           delay(50);
@@ -386,7 +386,7 @@ void loop() {
           servo_arm2.write(i);
           delay(20);
         }
-        //arm1 茶さじ根本
+        //arm1 茶さじnnn
         for (int i = servo_kaiten; i < servo_kaiten2; i++) {
           servo_arm1.write(i);
           delay(20);
@@ -432,7 +432,7 @@ void loop() {
           servo_arm2.write(i);
           delay(10);
         }
-        //arm1 茶さじ根本
+        //arm1 茶さじnnn
         for (int i = spcon_stop_duty; i < servo_kaiten; i++) {
           servo_arm1.write(i);
           delay(50);
@@ -487,7 +487,7 @@ void loop() {
           servo_arm2.write(i);
           delay(50);
         }
-        //arm1 茶さじ根本
+        //arm1 茶さじnnn
         for (int i = servo_kaiten; i < servo_kaiten2; i++) {
           servo_arm1.write(i);
           delay(150);
